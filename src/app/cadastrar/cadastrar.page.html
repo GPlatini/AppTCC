@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align:justify">Cadastro</ion-title>
+    <ion-buttons size="small" slot="start">
+      <ion-back-button defaultHref="home" text=""></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <small><ion-label position="floating">Nome</ion-label></small>
+    <ion-input type="text" [(ngModel)]="userRegister.nome"></ion-input>
+  </ion-item>
+  <ion-item>
+    <small><ion-label position="floating">Sobrenome</ion-label></small>
+    <ion-input type="text" [(ngModel)]="userRegister.sobrenome"></ion-input>
+  </ion-item>
+  <ion-item>
+    <small><ion-label position="floating">Email</ion-label></small>
+    <ion-input type="text" [(ngModel)]="userRegister.email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <small><ion-label position="floating">Senha</ion-label></small>
+    <ion-input type="password" [(ngModel)]="userRegister.senha"></ion-input>
+  </ion-item>
+  <ion-item>
+    <small><ion-label position="floating">Confirmação de Senha</ion-label></small>
+    <ion-input type="password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <!--Pattern caso o usuario digite um cpf, cep ou celular inválido-->
+    <small><ion-label position="floating">CPF</ion-label></small>
+    <ion-input class="form-control" type="number" pattern="\d{11}" [(ngModel)]="userRegister.cpf"></ion-input>
+  </ion-item>
+  <ion-item>
+    <small><ion-label position="stacked">Data de Nascimento</ion-label></small>
+    <ion-input type="date" [(ngModel)]="userRegister.datanascimento"></ion-input>
+  </ion-item>
+  <ion-item>
+    <small><ion-label position="floating">Celular</ion-label></small>
+    <ion-input type="text" pattern="\d{11}" [(ngModel)]="userRegister.telefone"></ion-input>
+  </ion-item>
+  <ion-item>
+    <small><ion-label position="floating">Endereço</ion-label></small>
+    <ion-input type="text" [(ngModel)]="userRegister.endereco"></ion-input>
+  </ion-item>
+  <ion-item>
+    <small><ion-label position="floating">Bairro</ion-label></small>
+    <ion-input type="text" [(ngModel)]="userRegister.bairro"></ion-input>
+  </ion-item>
+  <ion-item>
+    <small><ion-label position="floating">CEP</ion-label></small>
+    <ion-input type="text" pattern="\d{8}" [(ngModel)]="userRegister.cep"></ion-input>
+  </ion-item>
+  <ion-item>
+    <small><ion-label position="floating">Cidade</ion-label></small>
+    <ion-input type="text" [(ngModel)]="userRegister.cidade"></ion-input>
+  </ion-item>
+  <ion-item>
+    <small><ion-label position="floating">Estado</ion-label></small>
+    <ion-input type="text" [(ngModel)]="userRegister.estado"></ion-input>
+  </ion-item>
+  <ion-item>
+    <small><ion-label position="floating">País</ion-label></small>
+    <ion-input type="text" [(ngModel)]="userRegister.pais"></ion-input>
+  </ion-item>
+    <ion-list>
+      <ion-radio-group class="radio">
+        <ion-item>
+          <ion-label>Consumidor</ion-label>
+          <ion-radio type="radio" mode="md" value="consumidor"></ion-radio>
+          <ion-label>Feirante</ion-label>
+          <ion-radio type="radio" mode="md" value="feirante" [(ngModel)]="userRegister.feirante"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+    <ion-button mode="md" shape="round" fill="outline" expand="block" (click)="register()">Cadastrar</ion-button>
+  <br><br>
+</ion-content>

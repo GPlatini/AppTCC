@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "feira-delivery-tcc": {
+      "hosting": {
+        "app": [
+          "feira-delivery-tcc"
+        ]
+      }
+    }
+    }
+  }

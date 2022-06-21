@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-title>
+      
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button size="small" defaultHref="home" text="Sair"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list> <!--Aqui coloca o ngFor para cada feirante.-->
+    <ion-card> <!--O que é essencial ter nos cards: 
+      Nome (title), Bairro ou Área (subtitle), Breve descrição (content). A imagem é opcional.-->
+        <img src="https://st2.depositphotos.com/1029110/5874/v/450/depositphotos_58741893-stock-illustration-old-man.jpg" />
+        <ion-card-header>
+          <ion-card-title>Seu Zé</ion-card-title>
+          <ion-card-subtitle>Em Santana</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          Produtor local, vendo frutas e verduras.
+        </ion-card-content>
+      </ion-card>
+  </ion-list>  
+</ion-content>

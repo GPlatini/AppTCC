@@ -1,0 +1,7 @@
+{
+  "name": "AppTcc",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

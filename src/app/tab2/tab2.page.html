@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="success">
-    <ion-title>
-      Perfil
+    <ion-title class="align">
+      Meu Perfil
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -10,17 +10,20 @@
   <ion-content fullscreen>
     <ion-item>
       <ion-avatar>
-        <img src="https://st2.depositphotos.com/1029110/5874/v/450/depositphotos_58741893-stock-illustration-old-man.jpg" />
+        <img src="https://cdn.mindminers.com/blog/uploads/2021/09/avatar-perfil-blog.png">
       </ion-avatar>
       <ion-label class="label-config">
-        Seu zé
+        Usuário
       </ion-label>
     </ion-item>
     <ion-list>
-        <ion-item>
+        <ion-item >
+          <ion-icon name="add-circle-outline" class="spacing-config"></ion-icon>
           <ion-label>Cadastrar produtos</ion-label>
         </ion-item>
-        <ion-item  href="home"> <!--Adicionar método para encaminhar para página inicial-->
+        <ion-item  href="home">
+          <ion-icon name="exit-outline" class="spacing-config"></ion-icon>
+          <!--Adicionar método para encaminhar para página inicial-->
           Desconectar conta
         </ion-item>
      </ion-list>  

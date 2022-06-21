@@ -20,10 +20,6 @@ const routes: Routes = [
     loadChildren: () => import('./cadastrar/cadastrar.module').then( m => m.CadastrarPageModule)
   },
   {
-    path: 'entrar',
-    loadChildren: () => import('./entrar/entrar.module').then( m => m.EntrarPageModule)
-  },
-  {
     path: 'esqueceu-senha',
     loadChildren: () => import('./esqueceu-senha/esqueceu-senha.module').then( m => m.EsqueceuSenhaPageModule)
   }

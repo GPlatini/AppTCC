@@ -1,13 +1,13 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title style="text-align:justify">Cadastro</ion-title>
-    <ion-buttons size="small" slot="start">
-      <ion-back-button defaultHref="home" text=""></ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
+<ion-content class="flex-center" color="success">
+  <div id="container">
+  <ion-card class="card-config">
+    <div class="flex-center">
+      <ion-button href="home" color="medium" fill="clear">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+      <h1 class="title-config">Cadastro
+    </h1>
+    </div>
   <ion-item>
     <small><ion-label position="floating">Nome</ion-label></small>
     <ion-input type="text" [(ngModel)]="userRegister.nome"></ion-input>
@@ -66,15 +66,17 @@
     <ion-input type="text" [(ngModel)]="userRegister.pais"></ion-input>
   </ion-item>
     <ion-list>
-      <ion-radio-group class="radio">
-        <ion-item>
-          <ion-label>Consumidor</ion-label>
-          <ion-radio type="radio" mode="md" value="consumidor"></ion-radio>
-          <ion-label>Feirante</ion-label>
-          <ion-radio type="radio" mode="md" value="feirante" [(ngModel)]="userRegister.feirante"></ion-radio>
-        </ion-item>
+      <ion-radio-group [(ngModel)]="userRegister.feirante" class="radio">
+        <div class="margin-config">
+          <ion-label  class="radio-config">Consumidor</ion-label>
+          <ion-radio type="radio" mode="ios" value="consumidor"></ion-radio>
+          <ion-label  class="radio-config" >Feirante</ion-label>
+          <ion-radio type="radio" mode="ios" value="feirante" ></ion-radio>
+        </div>
       </ion-radio-group>
     </ion-list>
-    <ion-button mode="md" shape="round" fill="outline" expand="block" (click)="register()">Cadastrar</ion-button>
+    <ion-button class="btn-config-2" color="success" shape="round"  expand="block" (click)="register()">Cadastrar</ion-button>
   <br><br>
+</ion-card>
+</div>
 </ion-content>

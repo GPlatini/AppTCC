@@ -1,20 +1,19 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title mode="md" style="text-align:center">Redefinir Senha</ion-title>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="home" text=""></ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-<!--<ion-item> 
-    <small><ion-label position="floating">Nome</ion-label></small>
-    <ion-input type="text"></ion-input>
-  </ion-item>-->
+<ion-content class="flex-center" color="success">
+  <div id="container">
+  <ion-card class="card-config">
+    <div class="flex-center">
+      <ion-button href="home" color="medium" fill="clear">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+      <h1 class="title-config">Redefinir senha
+    </h1>
+  </div>
   <ion-item>
     <small><ion-label position="floating">Email</ion-label></small>
     <ion-input type="text" [(ngModel)]="userLogin.email"></ion-input>
   </ion-item>
-  <ion-button mode="md" shape="round" fill="outline" expand="block" (click)="recuperarSenha()">Redefinir Senha</ion-button>
+  <ion-button class="btn-config-2" color="medium" shape="round" fill="outline" expand="block" (click)="recuperarSenha()">Enviar</ion-button>
+</ion-card>
+  
+</div>  
 </ion-content>

@@ -31,7 +31,8 @@ export class HomePage {
       } catch (error) {
         const toastErroLogin = await this.toastCtrl.create({
           message: 'Usuário ou senha inválidos!',
-          duration: 3000
+          duration: 3000,
+          color: 'danger'
         })
         await toastErroLogin.present()
       } finally {

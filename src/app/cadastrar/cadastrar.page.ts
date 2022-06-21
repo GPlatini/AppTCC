@@ -31,12 +31,14 @@ export class CadastrarPage implements OnInit {
         await this.afs.collection('Users').doc(newUser.user.uid).set(this.userRegister);
         const toastSucesso = await this.toastCtrl.create({
           message: 'Usuário cadastrado com sucesso!',
-          duration: 3000});
+          duration: 3000,
+          color:'sucess'});
           await toastSucesso.present()
       } catch (error) {
         const toastErro = await this.toastCtrl.create({
           message: 'Usuário já cadastrado',
-          duration: 3000
+          duration: 3000,
+          color:'danger'
         });
         await toastErro.present()       
     } finally {
